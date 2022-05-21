@@ -324,8 +324,8 @@ function get3TopItems(arr) {
  *   [ 1, '2' ] => 1
  */
 function getPositivesCount(arr) {
-  // bug there?
-  return arr.filter((a) => typeof (a) === 'number' && a < 0).length;
+  const count = arr.filter((value) => value > 0 && typeof value === 'number');
+  return count.length;
 }
 
 /**
