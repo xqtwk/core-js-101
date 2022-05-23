@@ -149,6 +149,7 @@ function logger(/* func, logFunc */) {
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
 function partialUsingArguments(fn, ...args1) {
+  // eslint-disable-next-line func-names
   return function (...arg2) {
     return fn(...args1, ...arg2);
   };
